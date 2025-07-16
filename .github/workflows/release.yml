@@ -17,6 +17,7 @@ jobs:
       - name: Remove README
         run: |
           rm -f README.md
+          rm -rf .github
 
       - name: Version File
         run: |
