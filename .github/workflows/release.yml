@@ -7,6 +7,72 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-mac:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Create Virtual Environment
+        run: |
+          python -m venv py313-mac
+          rm py313-mac/.gitignore
+      
+      - name: Install Dependencies
+        run: |
+          source py313-mac/bin/activate
+          pip install -r requirements.txt
+  
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Create Virtual Environment
+        run: |
+          python -m venv py313-win
+          del py313-win\.gitignore
+      
+      - name: Install Dependencies
+        run: |
+          .\py313-win\Scripts\activate
+          pip install -r requirements.txt
+
+  build-linux:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Create Virtual Environment
+        run: |
+          python -m venv py313-linux
+          rm py313-linux/.gitignore
+      
+      - name: Install Dependencies
+        run: |
+          source py313-linux/bin/activate
+          pip install -r requirements.txt
+      
   release:
     runs-on: ubuntu-latest
 
