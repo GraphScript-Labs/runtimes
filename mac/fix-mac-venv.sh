@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get absolute path of the current directory
-VENV_DIR="./py313-mac"
+VENV_DIR="./runtime"
 NEW_VENV_PATH="$(cd "$VENV_DIR" && pwd)"
 PYTHON_BIN="$NEW_VENV_PATH/bin/python3"
 
