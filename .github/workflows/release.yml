@@ -29,7 +29,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git add .
-          git commit -m "Latest build $(date "+%Y-%m-%d %H:%M:%S")"
+          git commit -m "Branch setup for latest release"
           git push -f origin latest-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -68,8 +68,8 @@ jobs:
       - name: Commit and push changes
         run: |
           git add .
-          git commit -m "Latest build $(date "+%Y-%m-%d %H:%M:%S")"
-          git push -f origin latest-release
+          git commit -m "Build for MacOS"
+          git push origin latest-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
@@ -107,8 +107,8 @@ jobs:
       - name: Commit and push changes
         run: |
           git add .
-          git commit -m "Latest build $(date "+%Y-%m-%d %H:%M:%S")"
-          git push -f origin latest-release
+          git commit -m "Build for Windows"
+          git push origin latest-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -146,7 +146,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git add .
-          git commit -m "Latest build $(date "+%Y-%m-%d %H:%M:%S")"
+          git commit -m "Build for Linux"
           git push -f origin latest-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
