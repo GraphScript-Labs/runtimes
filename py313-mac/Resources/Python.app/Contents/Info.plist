@@ -18,9 +18,9 @@
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
-	<string>Python</string>
+	<string>GraphScript</string>
 	<key>CFBundleGetInfoString</key>
-	<string>3.13.5, (c) 2001-2024 Python Software Foundation.</string>
+	<string>GraphScript</string>
 	<key>CFBundleHelpBookFolder</key>
 	<array>
 		<string>Documentation</string>
