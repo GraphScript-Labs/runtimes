@@ -62,7 +62,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mac-artifact
+          name: py313-mac
           path: py313-mac/
   
   build-windows:
@@ -93,7 +93,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: win-artifact
+          name: py313-win
           path: py313-win/
 
   build-linux:
@@ -124,7 +124,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: linux-artifact
+          name: py313-linux
           path: py313-linux/
   
   release:
