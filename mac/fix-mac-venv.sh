@@ -1,5 +1,6 @@
 #!/bin/bash
 
+chmod 777 ./pyvenv.cfg
 cat > ./pyvenv.cfg << EOF
 home = ./bin
 include-system-site-packages = false
