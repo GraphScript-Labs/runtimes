@@ -46,7 +46,7 @@ jobs:
       
       - name: Install Dependencies
         run: |
-          py313-mac/bin/python3 -m pip install --force-reinstall --no-cache-dir -r requirements.txt -t ./py313-mac
+          py313-mac/bin/python3 -m pip install --force-reinstall --no-cache-dir -r requirements.txt -t ./py313-mac/packages
 
       - name: Verify Dependencies
         run: |
