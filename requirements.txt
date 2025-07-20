@@ -1,3 +1,0 @@
-gsam
-pywebview
-certifi
