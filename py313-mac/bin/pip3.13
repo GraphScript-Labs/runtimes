@@ -1,4 +1,6 @@
-#!/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13
+#!/bin/sh
+'''exec' "$(dirname -- "$(realpath -- "$0")")/python3.13" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

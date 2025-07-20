@@ -1,4 +1,6 @@
-#!/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13
+#!/bin/sh
+'''exec' "$(dirname -- "$(realpath -- "$0")")/python3.13" "$0" "$@"
+' '''
 # -*- python -*-
 
 # Keep this script in sync with python-config.sh.in

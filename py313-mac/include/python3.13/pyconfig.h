@@ -21,7 +21,7 @@
 #define ALIGNOF_LONG 8
 
 /* The normal alignment of `max_align_t', in bytes. */
-#define ALIGNOF_MAX_ALIGN_T 8
+#define ALIGNOF_MAX_ALIGN_T 16
 
 /* The normal alignment of `size_t', in bytes. */
 #define ALIGNOF_SIZE_T 8
@@ -67,7 +67,7 @@
 #define HAVE_ALARM 1
 
 /* Define if aligned memory access is required */
-/* #undef HAVE_ALIGNED_REQUIRED */
+#define HAVE_ALIGNED_REQUIRED 1
 
 /* Define to 1 if you have the <alloca.h> header file. */
 #define HAVE_ALLOCA_H 1
@@ -164,7 +164,7 @@
 /* #undef HAVE_CLOSE_RANGE */
 
 /* Define if the C compiler supports computed gotos. */
-#define HAVE_COMPUTED_GOTOS 1
+/* #undef HAVE_COMPUTED_GOTOS */
 
 /* Define to 1 if you have the `confstr' function. */
 #define HAVE_CONFSTR 1
@@ -270,7 +270,7 @@
 /* #undef HAVE_DEV_PTC */
 
 /* Define to 1 if you have the /dev/ptmx device file. */
-#define HAVE_DEV_PTMX 1
+/* #undef HAVE_DEV_PTMX */
 
 /* Define to 1 if you have the <direct.h> header file. */
 /* #undef HAVE_DIRECT_H */
@@ -301,7 +301,7 @@
 /* #undef HAVE_DUP3 */
 
 /* Define if you have the '_dyld_shared_cache_contains_path' function. */
-#define HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH 1
+/* #undef HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH */
 
 /* Defined when any dynamic module loading is enabled. */
 #define HAVE_DYNAMIC_LOADING 1
@@ -442,11 +442,11 @@
 /* #undef HAVE_GCC_ASM_FOR_MC68881 */
 
 /* Define if we can use x64 gcc inline assembler */
-/* #undef HAVE_GCC_ASM_FOR_X64 */
+#define HAVE_GCC_ASM_FOR_X64 1
 
 /* Define if we can use gcc inline assembler to get and set x87 control word
    */
-/* #undef HAVE_GCC_ASM_FOR_X87 */
+#define HAVE_GCC_ASM_FOR_X87 1
 
 /* Define if your compiler provides __uint128_t */
 #define HAVE_GCC_UINT128_T 1
@@ -786,7 +786,7 @@
 #define HAVE_LUTIMES 1
 
 /* Define to 1 if you have the <lzma.h> header file. */
-/* #undef HAVE_LZMA_H */
+#define HAVE_LZMA_H 1
 
 /* Define to 1 if you have the `madvise' function. */
 #define HAVE_MADVISE 1
@@ -840,7 +840,7 @@
 /* #undef HAVE_NCURSES */
 
 /* Define if you have the 'ncursesw' library */
-#define HAVE_NCURSESW 1
+/* #undef HAVE_NCURSESW */
 
 /* Define to 1 if you have the <ncursesw/curses.h> header file. */
 /* #undef HAVE_NCURSESW_CURSES_H */
@@ -910,7 +910,7 @@
 /* #undef HAVE_PANEL */
 
 /* Define if you have the 'panelw' library */
-#define HAVE_PANELW 1
+/* #undef HAVE_PANELW */
 
 /* Define to 1 if you have the <panel.h> header file. */
 #define HAVE_PANEL_H 1
@@ -1008,7 +1008,7 @@
 #define HAVE_PTSNAME 1
 
 /* Define to 1 if you have the `ptsname_r' function. */
-#define HAVE_PTSNAME_R 1
+/* #undef HAVE_PTSNAME_R */
 
 /* Define to 1 if you have the <pty.h> header file. */
 /* #undef HAVE_PTY_H */
@@ -1560,10 +1560,13 @@
 /* #undef HAVE_UUID_ENC_BE */
 
 /* Define if uuid_generate_time_safe() exists. */
-/* #undef HAVE_UUID_GENERATE_TIME_SAFE */
+#define HAVE_UUID_GENERATE_TIME_SAFE 1
+
+/* Define if uuid_generate_time_safe() is able to deduce a MAC address. */
+/* #undef HAVE_UUID_GENERATE_TIME_SAFE_STABLE_MAC */
 
 /* Define to 1 if you have the <uuid.h> header file. */
-/* #undef HAVE_UUID_H */
+#define HAVE_UUID_H 1
 
 /* Define to 1 if you have the <uuid/uuid.h> header file. */
 #define HAVE_UUID_UUID_H 1
@@ -1603,7 +1606,7 @@
 
 /* Define if tzset() actually switches the local timezone in a meaningful way.
    */
-#define HAVE_WORKING_TZSET 1
+/* #undef HAVE_WORKING_TZSET */
 
 /* Define to 1 if you have the `writev' function. */
 #define HAVE_WRITEV 1
@@ -1656,7 +1659,7 @@
 /* #undef PTHREAD_KEY_T_IS_COMPATIBLE_WITH_INT */
 
 /* Defined if PTHREAD_SCOPE_SYSTEM supported. */
-#define PTHREAD_SYSTEM_SCHED_SUPPORTED 1
+/* #undef PTHREAD_SYSTEM_SCHED_SUPPORTED */
 
 /* Define as the preferred size in bits of long digits */
 /* #undef PYLONG_BITS_IN_DIGIT */
@@ -1690,7 +1693,7 @@
 /* #undef Py_DEBUG */
 
 /* Defined if Python is built as a shared library. */
-/* #undef Py_ENABLE_SHARED */
+#define Py_ENABLE_SHARED 1
 
 /* Define if you want to disable the GIL */
 /* #undef Py_GIL_DISABLED */
@@ -1736,7 +1739,7 @@
 #define SIZEOF_LONG 8
 
 /* The size of `long double', as computed by sizeof. */
-#define SIZEOF_LONG_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
 
 /* The size of `long long', as computed by sizeof. */
 #define SIZEOF_LONG_LONG 8
@@ -1791,7 +1794,7 @@
 /* #undef TM_IN_SYS_TIME */
 
 /* Define if you want to use computed gotos in ceval.c. */
-#define USE_COMPUTED_GOTOS 1
+/* #undef USE_COMPUTED_GOTOS */
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
@@ -1882,7 +1885,7 @@
 
 
 /* Define if WINDOW in curses.h offers a field _flags. */
-/* #undef WINDOW_HAS_FLAGS */
+#define WINDOW_HAS_FLAGS 1
 
 /* Define if you want build the _decimal module using a coroutine-local rather
    than a thread-local context */
@@ -1913,7 +1916,7 @@
 
 /* Define if you want to produce an OpenStep/Rhapsody framework (shared
    library plus accessory files). */
-#define WITH_NEXT_FRAMEWORK 1
+/* #undef WITH_NEXT_FRAMEWORK */
 
 /* Define if you want to compile in Python-specific mallocs */
 #define WITH_PYMALLOC 1
@@ -1964,10 +1967,10 @@
 /* #undef _POSIX_THREADS */
 
 /* framework name */
-#define _PYTHONFRAMEWORK "Python"
+#define _PYTHONFRAMEWORK ""
 
 /* Define to force use of thread-safe errno, h_errno, and other functions */
-#define _REENTRANT 1
+/* #undef _REENTRANT */
 
 /* Define to 1 if you want to emulate getpid() on WASI */
 /* #undef _WASI_EMULATED_GETPID */
